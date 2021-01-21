@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+	<repo quality="experimental" status="unofficial">
+		<name>gentoo-pinephone</name>
+		<description lang="en">ebuilds to support the pinephone</description>
+		<homepage>https://github.com/psychedup/gentoo-pinephone</homepage>
+		<owner type="person">
+			<email>chris@mansfieldfamily.me</email>
+			<name>Chris Mansfield</name>
+		</owner>
+		<source type="git">https://github.com/psychedup/gentoo-pinephone.git</source>
+	</repo>
+</repositories>
