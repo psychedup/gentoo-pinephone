@@ -14,16 +14,11 @@ SLOT="0"
 KEYWORDS="~arm64"
 IUSE=""
 
-# todo: re-add USB tethering
 DEPEND="media-libs/alsa-ucm-pinephone
-		gnome-extra/iio-sensor-proxy
-		x11-themes/sound-theme-librem5
 		sys-firmware/anx7688-firmware
 		sys-firmware/rtl8723bt-firmware
 		sys-firmware/ov5640-firmware
-		media-tv/v4l-utils
 		app-mobilephone/pinephone-modem-scripts
-		sys-boot/osk-sdl
 "
 
 RDEPEND="${DEPEND}"
