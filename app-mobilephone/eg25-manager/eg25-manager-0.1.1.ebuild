@@ -12,6 +12,7 @@ SRC_URI="https://gitlab.com/mobian1/devices/eg25-manager/-/archive/${PV}/eg25-ma
 LICENSE="GPL3"
 SLOT="0"
 KEYWORDS="~arm64"
+IUSE="openrc"
 
 DEPEND="sys-libs/glibc
 		dev-libs/libgpiod
