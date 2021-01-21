@@ -24,7 +24,6 @@ DEPEND="sys-fs/udev
 		sys-firmware/anx7688-firmware
 		sys-firmware/rtl8723bt-firmware
 		sys-firmware/ov5640-firmware
-		app-mobilephone/pinephone-modem-scripts
 "
 
 RDEPEND="${DEPEND}"
