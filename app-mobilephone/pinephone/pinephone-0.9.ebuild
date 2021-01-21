@@ -38,28 +38,24 @@ src_install() {
 	doins "${FILESDIR}/hwtest.ini"
 
 	# GPS
-	newinitd "${FILESDIR}/gpsd_pinephone.initd gpsd_pinephone
-	insinto /etc/gps/
-	insopts -D -m744
-	newins "${FILESDIR}/gpsd_device-hook.sh device-hook
+	newinitd "${FILESDIR}/gpsd_pinephone.initd" gpsd_pinephone
+	exeinto /etc/gps/
+	newexe "${FILESDIR}/gpsd_device-hook.sh" device-hook
 	udev_dorules "${FILESDIR}/10-pinephone-proximity.rules"
 
 	# fix sysrq: HELP messages while playing audio
-	insopts -Dm644 
 	insinto /etc/sysctl.d/
 	doins "${FILESDIR}/sysrq.conf"
 
 	# alsa default stereo
-	insopts -Dm644
 	insinto /etc/
 	doins "${FILESDIR}/asound.conf"
 
 	# Alsa use case manager config
-	insopts -Dm644
 	insinto /usr/share/alsa/ucm2/PinePhone/
-	doins "${FILESDIR}/PinePhone.conf"
-	doins "${FILESDIR}/HiFi.comf"
-	doins "${FILESDIR}/VoiceCall.conf"
+	doins "${FILESDIR}/ucm/PinePhone.conf"
+	doins "${FILESDIR}/ucm/HiFi.conf"
+	doins "${FILESDIR}/ucm/VoiceCall.conf"
 
 	# Modem
 	newbin "${FILESDIR}/setup-modem.sh" pinephone_setup-modem
