@@ -9,7 +9,7 @@ DESCRIPTION="Daemon for managing the Quectel EG25 modem"
 HOMEPAGE="https://gitlab.com/mobian1/devices/eg25-manager"
 SRC_URI="https://gitlab.com/mobian1/devices/eg25-manager/-/archive/${PV}/eg25-manager-${PV}.tar.gz"
 
-LICENSE="GPL3"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~arm64"
 IUSE="openrc"
