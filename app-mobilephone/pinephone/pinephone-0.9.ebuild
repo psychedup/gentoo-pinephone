@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~arm64"
 IUSE=""
 
-DEPEND="sys-fs/udev
+DEPEND="virtual/udev
 		media-libs/alsa-ucm-conf
 		net-dialup/atinout
 		app-mobilephone/eg25-manager[openrc]
