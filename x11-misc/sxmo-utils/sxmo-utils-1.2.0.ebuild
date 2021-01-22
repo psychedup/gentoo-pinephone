@@ -44,7 +44,7 @@ DEPEND="
 	x11-misc/xclip
 	x11-misc/xdotool
 	x11-apps/xdpyinfo
-	s11-apps/xinput
+	x11-apps/xinput
 	x11-apps/xprop
 	x11-apps/xrandr
 	x11-apps/xrdb
