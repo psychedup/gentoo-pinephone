@@ -54,7 +54,7 @@ DEPEND="
 	net-misc/youtube-dl
 "
 RDEPEND="${DEPEND}"
-BDEPEND="dev-util/shellcheck"
+BDEPEND=""
 
 src_install() {
 	emake DESTDIR="${D}" install
