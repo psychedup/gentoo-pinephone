@@ -13,7 +13,7 @@ KEYWORDS="~arm64"
 
 DEPEND="
 	x11-misc/sxmo-dmenu
-	x11-wm-sxmo/dwm
+	x11-wm/sxmo-dwm
 	x11-terms/sxmo-st
 	www-client/sxmo-surf
 	x11-misc/svkbd
