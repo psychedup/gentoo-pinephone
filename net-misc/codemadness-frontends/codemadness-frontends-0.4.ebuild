@@ -15,6 +15,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-libs/libretls
+	dev-libs/libressl
 "
 
 S=${WORKDIR}/frontends-${PV}
