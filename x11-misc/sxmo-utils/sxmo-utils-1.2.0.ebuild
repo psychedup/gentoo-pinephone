@@ -20,7 +20,6 @@ DEPEND="
 	x11-misc/lisgd
 	media-sound/alsa-utils
 	x11-misc/autocutsel
-	net-misc/codemadness-frontends
 	app-admin/conky
 	sys-apps/coreutils
 	net-misc/curl
