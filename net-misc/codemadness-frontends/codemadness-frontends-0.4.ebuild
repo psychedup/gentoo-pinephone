@@ -14,7 +14,7 @@ KEYWORDS="~arm64"
 DEPEND=""
 RDEPEND="${DEPEND}"
 BDEPEND="
-	net-libs/gnutls
+	dev-libs/libretls
 "
 
 S=${WORKDIR}/frontends-${PV}
