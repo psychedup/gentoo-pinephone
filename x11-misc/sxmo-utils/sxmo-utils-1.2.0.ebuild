@@ -48,7 +48,7 @@ DEPEND="
 	x11-apps/xprop
 	x11-apps/xrandr
 	x11-apps/xrdb
-	x11-apps/xsel
+	x11-misc/xsel
 	x11-apps/xset
 	x11-apps/xsetroot
 	x11-apps/xwininfo
