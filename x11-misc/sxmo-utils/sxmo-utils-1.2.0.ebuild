@@ -56,6 +56,14 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+src_prepare() {
+
+	# since I can't install shellcheck, install this instead
+	newbin "${FILESDIR}"$/shellcheck-dummy shellcheck
+
+	default_src_prepare
+}
+
 src_install() {
 	emake DESTDIR="${D}" install
 
@@ -63,4 +71,5 @@ src_install() {
 	doins "${FILESDIR}/sxmo.conf"
 
 	fperms u+s "${D}/usr/bin/sxmo_{setpineled,setpinebacklight,screenlock}"
+	rm /usr/bin/shellcheck
 }
