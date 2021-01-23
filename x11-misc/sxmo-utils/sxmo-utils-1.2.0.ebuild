@@ -63,7 +63,7 @@ src_prepare() {
 
 src_install() {
 	insinto "${EPREFIX}"/usr/share/"${P}"
-	doins "${S}"/configs/*
+	doins -r "${S}"/configs/*
 
 	insinto "${EPREFIX}"/etc/alsa/conf.d
 	doins "${S}"/configs/alsa/alsa_sxmo_enable_dmix.conf
@@ -71,7 +71,7 @@ src_install() {
 	insinto "${EPREFIX}"/etc/polkit-1/rules.d
 	doins "${S}"/configs/polkit/*.rules
 
-	insinto "${EPREFIX}"/etc/udev/rules.d
+	insinto "${EPREFIX}"/lib/udev/rules.d
 	doins "${S}"/configs/udev/*.rules
 
 	insinto "${EPREFIX}"/usr/share/applications
@@ -85,5 +85,7 @@ src_install() {
 	insinto /etc/modprobe.d/
 	doins "${FILESDIR}/sxmo.conf"
 
-	fperms u+s "${S}/usr/bin/sxmo_{setpineled,setpinebacklight,screenlock}"
+	fperms u+s /usr/bin/sxmo_setpineled
+	fperms u+s /usr/bin/sxmo_setpinebacklight
+	fperms u+s /usr/bin/sxmo_screenlock
 }
