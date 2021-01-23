@@ -62,7 +62,7 @@ src_prepare() {
 }
 
 src_install() {
-	insinto "${EPREFIX}"/usr/share/${P}
+	insinto "${EPREFIX}"/usr/share/"${P}"
 	doins "${S}"/configs/*
 
 	insinto "${EPREFIX}"/etc/alsa/conf.d
