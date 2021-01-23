@@ -27,7 +27,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake PREFIX=${EPREFIX}/usr DESTDIR=${D}
+	emake PREFIX=${EPREFIX}/usr DESTDIR=${D} install
 
 	insinto /usr/share/applications/
 	doins "${FILESDIR}/st.desktop"
