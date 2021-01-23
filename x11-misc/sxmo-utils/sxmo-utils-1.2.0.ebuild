@@ -16,7 +16,7 @@ DEPEND="
 	x11-wm/sxmo-dwm
 	x11-terms/sxmo-st
 	www-client/sxmo-surf
-	x11-misc/svkbd
+	x11-misc/sxmo-svkbd
 	x11-misc/lisgd
 	media-sound/alsa-utils
 	x11-misc/autocutsel
