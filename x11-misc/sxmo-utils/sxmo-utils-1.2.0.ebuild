@@ -63,27 +63,27 @@ src_prepare() {
 
 src_install() {
 	insinto "${EPREFIX}"/usr/share/${P}
-	doins "${D}"/configs/*
+	doins "${S}"/configs/*
 
 	insinto "${EPREFIX}"/etc/alsa/conf.d
-	doins "${D}"/configs/alsa/alsa_sxmo_enable_dmix.conf
+	doins "${S}"/configs/alsa/alsa_sxmo_enable_dmix.conf
 
 	insinto "${EPREFIX}"/etc/polkit-1/rules.d
-	doins "${D}"/configs/polkit/*.rules
+	doins "${S}"/configs/polkit/*.rules
 
 	insinto "${EPREFIX}"/etc/udev/rules.d
-	doins "${D}"/configs/udev/*.rules
+	doins "${S}"/configs/udev/*.rules
 
 	insinto "${EPREFIX}"/usr/share/applications
-	doins "${D}"/configs/xdg/mimeapps.list
+	doins "${S}"/configs/xdg/mimeapps.list
 
-	dobin "${D}"/scripts/*/*
+	dobin "${S}"/scripts/*/*
 
-	dobin "${D}"/programs/sxmo_{setpineled,setpinebacklight,screenlock}
-	dobin "${D}"/programs/sxmo_{megiaudioroute,vibratepine}
+	dobin "${S}"/programs/sxmo_{setpineled,setpinebacklight,screenlock}
+	dobin "${S}"/programs/sxmo_{megiaudioroute,vibratepine}
 
 	insinto /etc/modprobe.d/
 	doins "${FILESDIR}/sxmo.conf"
 
-	fperms u+s "${D}/usr/bin/sxmo_{setpineled,setpinebacklight,screenlock}"
+	fperms u+s "${S}/usr/bin/sxmo_{setpineled,setpinebacklight,screenlock}"
 }
