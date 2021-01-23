@@ -57,9 +57,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 # hack to attempt to ignore shellcheck which doesn't seem to work on arm64
-shellcheck() {
-	return 0
-}
+alias shellcheck="/bin/true"
 
 src_install() {
 	emake DESTDIR="${D}" install
