@@ -56,8 +56,10 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-# hack to attempt to ignore shellcheck which doesn't seem to work on arm64
-alias shellcheck="/bin/true"
+src_prepare() {
+	default_src_prepare
+	sed -i -e 's/shellcheck/true/' "${S}"/Makefile
+}
 
 src_install() {
 	emake DESTDIR="${D}" install
