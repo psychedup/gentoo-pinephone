@@ -56,6 +56,11 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+# hack to attempt to ignore shellcheck which doesn't seem to work on arm64
+shellcheck() {
+	return 0
+}
+
 src_prepare() {
 
 	# since I can't install shellcheck, install this instead
