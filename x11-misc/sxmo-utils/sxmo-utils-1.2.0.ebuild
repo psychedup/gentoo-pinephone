@@ -59,7 +59,7 @@ BDEPEND=""
 src_prepare() {
 
 	# since I can't install shellcheck, install this instead
-	newbin "${FILESDIR}"$/shellcheck-dummy shellcheck
+	newbin "${FILESDIR}/shellcheck-dummy" shellcheck
 
 	default_src_prepare
 }
