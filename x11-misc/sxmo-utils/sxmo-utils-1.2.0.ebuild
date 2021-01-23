@@ -62,7 +62,25 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	insinto "${EPREFIX}"/usr/share/${P}
+	doins "${D}"/configs/*
+
+	insinto "${EPREFIX}"/etc/alsa/conf.d
+	doins "${D}"/configs/alsa/alsa_sxmo_enable_dmix.conf
+
+	insinto "${EPREFIX}"/etc/polkit-1/rules.d
+	doins "${D}"/configs/polkit/*.rules
+
+	insinto "${EPREFIX}"/etc/udev/rules.d
+	doins "${D}"/configs/udev/*.rules
+
+	insinto "${EPREFIX}"/usr/share/applications
+	doins "${D}"/configs/xdg/mimeapps.list
+
+	dobin "${D}"/scripts/*/*
+
+	dobin "${D}"/programs/sxmo_{setpineled,setpinebacklight,screenlock}
+	dobin "${D}"/programs/sxmo_{megiaudioroute,vibratepine}
 
 	insinto /etc/modprobe.d/
 	doins "${FILESDIR}/sxmo.conf"
